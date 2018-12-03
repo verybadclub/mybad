@@ -9,22 +9,39 @@
 		margin:auto;
 		padding:5px 0;
 	}
-	ul {padding:0;margin:0;/* border: 1px solid black; */}
+	ul {padding:0;margin:0;}
 	li {display:flex;flex-flow: row;justify-content: space-evenly;align-items: center;}
-	li:nth-child(1) {
-		border-top-width: 1px;
-	}
 	li:nth-child(even) {
 		background-color: #f1eb51;
 	}
+	li.now {
+		height:3px;
+		border-radius: 3px;
+		padding: 0;
+		width:100%;
+		background-color:red;
+	}
 	li.passed {
+		position:relative;
+		border-color:#ccc;
+		border-bottom-color:#ccc;
+	}
+	li.passed > .mask {
 		background-color: #eee;
-		color: #444;
+		opacity: 0.4;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
 	}
 	li:nth-child(even).passed {
 		background-color: #e6e38c;
 	}
-	li {padding:0.5em;border: 1px solid black;border-top-width: 0px;text-align: center;}
+	li {padding:0.5em;border: 1px solid black;border-bottom-width: 0px;text-align: center;}
+	li:last-child {
+		border-bottom-width: 1px;
+	}
 	li > *:nth-child(1) {flex:1;}
 	li > *:nth-child(2) {flex:1.5;}
 	li > *:nth-child(3) {flex:1.5;}
@@ -69,30 +86,48 @@
 </header>
 <h1>Masculine 1 (EPPGBAD-1)</h1>
 <ul>
-	<li class="passed"><div>J1</div><div>09/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">5</span> - 1</div><div class="club">RSCM-DM2-3 (Montreuil)</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li class="passed"><div>J2</div><div>16/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">5</span> - 1</div><div class="club">CBAB-DM2-9 (Aulnay)</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J4</div><div>30/11 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">BCP93-DM2</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J5</div><div>07/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2 - 5</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J6</div><div>14/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">RSCM-DM2 - 3</div><a href="https://maps.google.com/?q=Jean Moulin, 93100, MONTREUIL, 16 avenue Jean Moulin"><span>Jean Moulin, 93100, MONTREUIL, 16 avenue Jean Moulin</span><span class="fa fa-location-arrow"></span></a></li>
-	<li><div>J7</div><div>18/12 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">CBAB-DM2 - 9</div><a href="https://maps.google.com/?q=Gymnase Omar Chérif, 93600, AULNAY SOUS BOIS"><span>Gymnase Omar Chérif, 93600, AULNAY SOUS BOIS</span><span class="fa fa-location-arrow"></span></a></li>
-	<li><div>J9</div><div>15/01 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">BCP93-DM2</div><a href="https://maps.google.com/?q=Centre Omnisport du Raincy - 26 Avenue Thiers - 93300"><span>Centre Omnisport du Raincy - 26 Avenue Thiers - 93300</span><span class="fa fa-location-arrow"></span></a></li>
-	<li><div>J10</div><div>23/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2 - 5</div><a href="https://maps.google.com/?q=Toussaint Louverture, 93290"><span>Toussaint Louverture, 93290</span><span class="fa fa-location-arrow"></span></a></li>
+	<li class="passed"><div>J1</div><div>09/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">5</span> - 1</div><div class="club">RSCM-DM2-3</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div><div class="mask"></div></li>
+	<li class="passed"><div>J2</div><div>16/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">5</span> - 1</div><div class="club">CBAB-DM2-9</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li class="passed"><div>J4</div><div>30/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">4</span> - 2</div><div class="club">BCP93-DM2</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li class="now"></li>
+	<li><div>J5</div><div>07/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2-5</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li><div>J6</div><div>14/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">RSCM-DM2-3</div><a href="https://maps.google.com/?q=Jean Moulin, 93100, MONTREUIL, 16 avenue Jean Moulin"><span>Jean Moulin, 93100, MONTREUIL, 16 avenue Jean Moulin</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li><div>J7</div><div>18/12 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">CBAB-DM2-9</div><a href="https://maps.google.com/?q=Gymnase Omar Chérif, 93600, AULNAY SOUS BOIS"><span>Gymnase Omar Chérif, 93600, AULNAY SOUS BOIS</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li><div>J9</div><div>15/01 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">BCP93-DM2</div><a href="https://maps.google.com/?q=Centre Omnisport du Raincy - 26 Avenue Thiers - 93300"><span>Centre Omnisport du Raincy - 26 Avenue Thiers - 93300</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li><div>J10</div><div>23/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2-5</div><a href="https://maps.google.com/?q=Toussaint Louverture, 93290"><span>Toussaint Louverture, 93290</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
 </ul>
 
 <h1>Masculine 2 (EPPGBAD-2)</h1>
 <ul>
-	<li class="passed"><div>J1</div><div>07/11 19:45</div><div class="club">Very Bad Club</div><div class="score">1 - <span class="winner">5</span></div><div class="club winner">USMA.BAD-DM2 - 3</div><a href="https://maps.google.com/?q=Tommie Smith, 93400, Saint-Ouen, 44 rue Eugène Berthoud"><span>Tommie Smith, 93400, Saint-Ouen, 44 rue Eugène Berthoud</span><span class="fa fa-location-arrow"></span></a></li>
-	<li class="passed"><div>J2</div><div>16/11 20:00</div><div class="club">Very Bad Club</div><div class="score">0 - <span class="winner">6</span></div><div class="club winner">ACB-DM2-5 (Bobigny)</div><a href="https://maps.google.com/?q=J.-P. Timbaud, 93000, BOBIGNY, Rue de Leningrad"><span>J.-P. Timbaud, 93000, BOBIGNY, Rue de Leningrad</span><span class="fa fa-location-arrow"></span></a></li>
-	<li><div>J3</div><div>23/11 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">SCUSMG-DM2 - 3</div><a href="https://maps.google.com/?q=JARENA, 93220, Gagny, 2 chemin de montguichet"><span>ARENA, 93220, Gagny, 2 chemin de montguichet</span><span class="fa fa-location-arrow"></span></a></li>
-	<li><div>J4</div><div>30/11 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2 - 6</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J6</div><div>14/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">USMA.BAD-DM2</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J7</div><div>21/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">ACB-DM2-5</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J8</div><div>11/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">SCUSMG-DM2 - 3</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li><div>J9</div><div>16/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2 - 6</div><a href="https://maps.google.com/?q=Toussaint Louverture, 93290"><span>Toussaint Louverture, 93290</span><span class="fa fa-location-arrow"></span></a></li>
+	<li class="passed"><div>J1</div><div>07/11 19:45</div><div class="club">Very Bad Club</div><div class="score">1 - <span class="winner">5</span></div><div class="club winner">USMA.BAD-DM2 - 3</div><a href="https://maps.google.com/?q=Tommie Smith, 93400, Saint-Ouen, 44 rue Eugène Berthoud"><span>Tommie Smith, 93400, Saint-Ouen, 44 rue Eugène Berthoud</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li class="passed"><div>J2</div><div>16/11 20:00</div><div class="club">Very Bad Club</div><div class="score">0 - <span class="winner">6</span></div><div class="club winner">ACB-DM2-5</div><a href="https://maps.google.com/?q=J.-P. Timbaud, 93000, BOBIGNY, Rue de Leningrad"><span>J.-P. Timbaud, 93000, BOBIGNY, Rue de Leningrad</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li class="passed"><div>J3</div><div>23/11 19:30</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">SCUSMG-DM2-3</div><a href="https://maps.google.com/?q=JARENA, 93220, Gagny, 2 chemin de montguichet"><span>ARENA, 93220, Gagny, 2 chemin de montguichet</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
+	<li class="passed"><div>J4</div><div>30/11 20:00</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">5</span> - 1</div><div class="club">TACBAD-DM2-6</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li class="now"></li>
+	<li><div>J6</div><div>14/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">USMA.BAD-DM2</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li><div>J7</div><div>21/12 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">ACB-DM2-5</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li><div>J8</div><div>11/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">SCUSMG-DM2-3</div><a href="https://maps.google.com/?q=Gymnase Nodier"><span>Gymnase Nodier</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
+	<li><div>J9</div><div>16/01 20:00</div><div class="club">Very Bad Club</div><div class="score"></div><div class="club">TACBAD-DM2-6</div><a href="https://maps.google.com/?q=Toussaint Louverture, 93290"><span>Toussaint Louverture, 93290</span><span class="fa fa-location-arrow"></span></a><div class="mask"></div></li>
 </ul>
 </body>
-<script>$(function() {
-			
-		});
+<script>
+var cities = {};
+cities['RSCM-DM2-3'] = 'Montreuil 3';
+cities['CBAB-DM2-9'] = 'Aulnay 9';
+cities['ACB-DM2-5'] = 'Bobigny 5';
+cities['BCP93-DM2'] = 'Pavillon-sous-bois';
+cities['TACBAD-DM2-5'] = 'Tremblay 5';
+cities['TACBAD-DM2-6'] = 'Tremblay 6';
+cities['USMA.BAD-DM2'] = 'Saint-Ouen';
+cities['SCUSMG-DM2-3'] = 'Gagny 3';
+$(function() {
+	$('.club').text(function () {
+		var city = cities[$(this).text()];
+		if (city) {
+			return $(this).text() + ' (' + city + ')';
+		}
+		return $(this).text();
+	});
+});
 </script>
 </html>
