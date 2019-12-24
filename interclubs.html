@@ -14,7 +14,7 @@
 	li:nth-child(even) {
 		background-color: #f1eb51;
 	}
-	li.now {
+	.now {
 		height:3px;
 		border-radius: 3px;
 		padding: 0;
@@ -22,23 +22,7 @@
 		background-color: red;
 		border-width: 0;
 	}
-	li.passed {
-		position:relative;
-		border-color:#ccc;
-		border-bottom-color:#ccc;
-	}
-	li.passed > .mask {
-		background-color: #eee;
-		opacity: 0.0;
-		position:absolute;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-	}
-	li:nth-child(even).passed {
-		/* background-color: #e6e38c; */
-	}
+
 	li {padding:0.5em;border: 1px solid black;border-bottom-width: 0px;text-align: center;}
 	li:last-child {
 		border-bottom-width: 1px;
@@ -53,7 +37,7 @@
 		display:inline;
 	}
 	span[class*="fa-"] {
-		display:none;
+		margin-left:5px;
 	}
 	.winner {
 		font-weight:bold;
@@ -72,9 +56,6 @@
 		a > span {
 			display:none;
 		}
-		span[class*="fa-"] {
-			display:inline-block;
-		}
 		li > *:nth-child(6) {flex:1;}
 	}
 	</style>
@@ -88,19 +69,19 @@
 <h1>Very Bad Club (EPPGBAD-1 DM3-1) Division Masculine</h1>
 <h2>Saison 2019 - 2020</h2>
 <ul>
-	<li class="passed"><div>J1</div><div>08/11 19:30</div><div class="club">Very Bad Club</div><div class="score">0 - <span class="winner">6</span></div><div class="club winner">Neuilly-plaisance</div><div></div></li>
-	<li class="passed"><div>J2</div><div>15/11 19:45</div><div class="club">Very Bad Club</div><div class="score">2 - <span class="winner">4</span></div><div class="club">Montreuil</div><a href="https://maps.google.com/?q=Gymnase Jean Moulin"><span>Gymnase Jean Moulin</span><span class="fa fa-flag-checkered"></span></a><div class="mask"></div></li>
-        <li class="passed"><div>J3</div><div>29/11 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Noisy-le-grand</div><div></div></li>
-	<li class="passed"><div>J4</div><div>06/12 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Bobigny</div><div></div></li>
-	<li class="passed"><div>J5</div><div>13/12 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Tremblay</div><div></div></li>
-	<li class="passed"><div>J6</div><div>17/01 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Neuilly-plaisance</div><div></div></li>
-	<li class="passed"><div>J7</div><div>24/01 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Montreuil</div><div></div></li>
-	<li class="passed"><div>J8</div><div>03/02 20:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Noisy-le-grand</div><a href="https://maps.google.com/?q=Gymnase de la butte verte, 93160 Noisy-le-grand"><span>Gymnase de la butte verte</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li class="passed"><div>J9</div><div>26/02 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Bobigny</div><a href="https://maps.google.com/?q=Gymnase Henri Barbusse, 93000 Bobigny"><span>Gymnase Henri Barbusse</span><span class="fa fa-flag-checkered"></span></a></li>
-	<li class="passed"><div>J10</div><div>04/03 20:00</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Tremblay</div><a href="https://maps.google.com/?q=Gymnase toussaint louverture, 93290 Tremblay en France"><span>Gymnase Toussaint Louverture</span><span class="fa fa-flag-checkered"></span></a></li>
+	<li><div>J1</div><div>08/11 19:30</div><div class="club">Very Bad Club</div><div class="score">0 - <span class="winner">6</span></div><div class="club winner">Neuilly-plaisance</div><div></div></li>
+	<li><div>J2</div><div>15/11 19:45</div><div class="club">Very Bad Club</div><div class="score">2 - <span class="winner">4</span></div><div class="club winner">Montreuil</div><a href="https://maps.google.com/?q=Gymnase Jean Moulin"><span>Gymnase Jean Moulin</span><span class="fa fa-flag-checkered"></span></a></li>
+        <li><div>J3</div><div>29/11 19:30</div><div class="club winner">Very Bad Club</div><div class="score winner">3 - 3</div><div class="clu winner">Noisy-le-grand</div><div></div></li>
+	<li><div>J4</div><div>20/12 19:30</div><div class="club">Very Bad Club</div><div class="score">1 - <span class="winner">5</span></div><div class="club winner">Bobigny</div><div></div></li>
+	<li><div>J5</div><div>13/12 19:30</div><div class="club winner">Very Bad Club</div><div class="score"><span class="winner">4</span> - 2</div><div class="club">Tremblay</div><div></div></li>
+	<li><div>J6</div><div>17/01 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Neuilly-plaisance</div><div></div></li>
+	<li><div>J7</div><div>24/01 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Montreuil</div><div></div></li>
+	<li><div>J8</div><div>03/02 20:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Noisy-le-grand</div><a href="https://maps.google.com/?q=Gymnase de la butte verte, 93160 Noisy-le-grand"><span>Gymnase de la butte verte</span><span class="fa fa-flag-checkered"></span></a></li>
+	<li><div>J9</div><div>26/02 19:30</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Bobigny</div><a href="https://maps.google.com/?q=Gymnase Henri Barbusse, 93000 Bobigny"><span>Gymnase Henri Barbusse</span><span class="fa fa-flag-checkered"></span></a></li>
+	<li><div>J10</div><div>04/03 20:00</div><div class="club">Very Bad Club</div><div class="score">? - ?</div><div class="club">Tremblay</div><a href="https://maps.google.com/?q=Gymnase toussaint louverture, 93290 Tremblay en France"><span>Gymnase Toussaint Louverture</span><span class="fa fa-flag-checkered"></span></a></li>
 </ul>
 <br>
-<div style="font-style:italic;">Légende : <span class="fa fa-flag-checkered" style="display:inline-block !important;"></span> match chez l'adversaire.</div>
+<div style="font-style:italic;">Légende : <span class="fa fa-flag-checkered"></span> match chez l'adversaire.</div>
 <div style="font-style:italic;">Pas de drapeau, match a domicile.</div>
 
 </body>
